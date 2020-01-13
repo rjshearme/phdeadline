@@ -10,7 +10,9 @@ function zeroPad(number) {
 
 
 function updateTimer() {
-    let new_time = new Date().setMonth(12); //TODO: find out why this is giving the incorrect month.
+    const new_time = new Date();
+    const current_month = (new_time.getMonth() + 1) % 12
+    new_time.setMonth(current_month);
     let time_remaining = end_time - new_time;
     let seconds = Math.floor(time_remaining / 1000);
     let milli_secs_remaining = time_remaining - (seconds * 1000);
