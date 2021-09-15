@@ -1,4 +1,4 @@
-let end_time = new Date(2021, 9, 30, 23, 59, 59);
+let end_time = new Date(2021, 9, 30, 17, 0, 0);
 
 function zeroPad(number) {
     if (number < 10) {
